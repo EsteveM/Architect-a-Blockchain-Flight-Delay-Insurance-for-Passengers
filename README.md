@@ -119,7 +119,7 @@ The procedure to obtain functional a copy of the project on your local machine s
         ![npmrunserver2](/Screenshots/npmrunserver2.png)
         * Finally, the oracles that have been registered are shown as well.
         ![npmrunserver3](/Screenshots/npmrunserver3.png)
-    * Back to your browser, where the front-end of the Dapp resides, select in Metamask the account for the passenger you want to work with. In our example, it is the second address shown in Ganache-cli, which we have imported into Metamask:
+    * Back to your browser, where the front-end resides, select in Metamask the account for the passenger you want to work with. In our example, it is the second address shown in Ganache-cli, which we have imported into Metamask:
     ![metamask](/Screenshots/metamask.png)
     * Now, you can test the life cycle of the flight delay insurance DApp throughout its different stages. These stages are represented by the four sections of the front-end page, which can be conveniently located by either scrolling or through the navigation bar at the end of the page:
         * *Check Operational Status of Contract*. This first section allows you to check the operational status of the contract, by just clicking the *check* button.
