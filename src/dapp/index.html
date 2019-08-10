@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <!-- NAVIGATION BAR TO THE DIFFERENT SECTIONS -->
+        <ul class="nav navbar-nav">
+            <li><a href="#" class="nav-link">Check Operational Status</a></li>
+            <li><a href="#display-purchase-insurance" class="nav-link">Purchase Insurance</a></li>
+            <li><a href="#display-fetch-flight-status" class="nav-link">Flight Status Update</a></li>
+            <li><a href="#display-insurance-payout" class="nav-link">Insurance Payout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- CHECK OPERATIONAL STATUS OF CONTRACT -->
+        <div class="container">
+            <div id="display-check-operational-status" class="top-20"></div>
+            <div class="row top-20">
+                <btn class="btn btn-primary" id="check-operational-status">Check</btn>
+            </div>
+        </div>
+        
+        <!-- PURCHASE INSURANCE -->
+        <div class="container">
+            <div id="display-purchase-insurance" class="top-20"></div>
+            <div class="row top-20">
+                <label class="form">Passenger</label>
+                <select type="text" id="purchase-insurance-passenger"></select>
+            </div>
+            <div class="row top-20">
+                <label class="form">Flight (*)</label>
+                <select type="text" id="purchase-insurance-flight"></select>
+            </div>
+            <div class="row top-20">
+                <label class="form">Amount</label>
+                <input type="text" id="purchase-insurance-amount"> eth
+            </div>
+            <div class="row top-20">
+                <btn class="btn btn-primary" id="purchase-insurance">Buy</btn>
+            </div>
+            <div class="row top-20">
+                    <label class="form">(*) Airline</label>
+                    <input type="text" id="purchase-insurance-airline" disabled>
+                    <label class="form">Flight Number</label>
+                    <input type="text" id="purchase-insurance-flightNumber" disabled>
+                    <label class="form">Timestamp</label>
+                    <input type="text" id="purchase-insurance-timestamp" disabled>
+                </div>
+        </div>
+
+        <!-- FETCH FLIGHT STATUS -->
+        <div class="container">
+            <div id="display-fetch-flight-status" class="top-20"></div>
+            <div class="row top-20">
+                <label class="form">Passenger</label>
+                <select type="text" id="fetch-flight-status-passenger"></select>
+            </div>
+            <div class="row top-20">
+                <label class="form">Flight (*)</label>
+                <select type="text" id="fetch-flight-status-flight"></select>
+            </div>
+            <div class="row top-20">
+                <btn class="btn btn-primary" id="fetch-flight-status">Fetch</btn>
+            </div>
+            <div class="row top-20">
+                <label class="form">(*) Airline</label>
+                <input type="text" id="fetch-flight-status-airline" disabled>
+                <label class="form">Flight Number</label>
+                <input type="text" id="fetch-flight-status-flightNumber" disabled>
+                <label class="form">Timestamp</label>
+                <input type="text" id="fetch-flight-status-timestamp" disabled>
+            </div>
+        </div>
+
+        <!-- INSURANCE PAYOUT -->
+        <div class="container">
+            <div id="display-insurance-payout" class="top-20"></div>
+            <div class="row top-20">
+                <label class="form">Passenger</label>
+                <select type="text" id="insurance-payout-passenger"></select>
+            </div>
+            <div class="row top-20">
+                <label class="form">Flight (*)</label>
+                <select type="text" id="insurance-payout-flight"></select>
+            </div>
+            <div class="row top-20">
+                <btn class="btn btn-primary" id="insurance-payout">Withdraw</btn>
+            </div>
+            <div class="row top-20">
+                <label class="form">(*) Airline</label>
+                <input type="text" id="insurance-payout-airline" disabled>
+                <label class="form">Flight Number</label>
+                <input type="text" id="insurance-payout-flightNumber" disabled>
+                <label class="form">Timestamp</label>
+                <input type="text" id="insurance-payout-timestamp" disabled>
+            </div>
+        </div>
+        <div class="row top-20"></div>
+        <div class="row top-20"></div>
+    </main>
+
+</body>
+
+</html>
