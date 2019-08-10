@@ -1,7 +1,6 @@
 // Secret parameters file
 // Ganache seed (mnemonic)
-//const mnemonic = "xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx";
-const mnemonic = "grant result below train travel donate impulse hollow advice robust rubber cotton";
+const mnemonic = "xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx";
 const ALWAYS_RETURN_STATUS_CODE_LATE_AIRLINE = true;
 
 module.exports = {

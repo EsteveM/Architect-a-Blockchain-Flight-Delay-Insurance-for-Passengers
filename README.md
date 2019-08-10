@@ -96,11 +96,10 @@ The procedure to obtain functional a copy of the project on your local machine s
 
 * Firstly, you have to download/clone the project files from this repository onto your local machine. Then, cd into the root folder where the project files are located.
 * Secondly, type `npm install` on a terminal shell window so that all required npm packages are installed.
-* Thirdly, run Ganache by typing `ganache-cli`. This will start Ganache at *http://127.0.0.1:8545/*. This project has been developed assuming that block gas limit is set at 9999999, the number of accounts to generate at startup is 200, and the amount of ether to be assigned to each account is 50000. This can be accomplished by typing `ganache-cli -l 9999999 -a 200 -e 50000`. However, you might prefer to set some other values.
-* In the fourth place, you have to set up a *secret-parameters.js* file at the root folder of this project, where you are located just now. This is a secret parameters file where you have to type two parameters for the application:
+* Thirdly, run Ganache. This will start Ganache at *http://127.0.0.1:8545/*. This project has been developed assuming that block gas limit is set at 9999999, the number of accounts to generate at startup is 200, and the amount of ether to be assigned to each account is 50000. This can be accomplished by typing `ganache-cli -l 9999999 -a 200 -e 50000`. However, you might prefer to set some other values.
+* In the fourth place, you have to set up a *secret-parameters.js* file at the root folder of this project, where you are located just now. For convenience, one such file has been provided for you, so that you just have to fill out the data into the corresponding fields. This is a secret parameters file where you have to type two parameters for the application:
     * Firstly, your *Ganache seed (mnemonic)*.
     * Secondly, whether you want to force that the oracles always return that the flights have been delayed due to airline reasons. In this case, insurees will be credited the insurance payout. This can come in handy for testing reasons, as you will not have to wait for this result to happen by chance. To obtain this effect, just fill out the *ALWAYS_RETURN_STATUS_CODE_LATE_AIRLINE* constant as *true*.
-For convenience, one such file has been provided for you, so that you just have to fill out the data into the corresponding fields.
 * In the fifth place, to run the supporting unit tests on Ganache, you have to:
     * Open a new terminal shell window, cd to the same root folder of the project, and type `truffle compile` to compile the smart contracts. Once the contracts have been successfully compiled, type `truffle migrate --reset`, to deploy them to Ganache.
     * Now, you can run `truffle test ./test/flightSurety.js` firstly, and then `truffle test ./test/oracles.js` to run all twelve supporting unit tests.
@@ -120,9 +119,9 @@ For convenience, one such file has been provided for you, so that you just have 
         ![npmrunserver2](/Screenshots/npmrunserver2.png)
         * Finally, the oracles that have been registered are shown as well.
         ![npmrunserver3](/Screenshots/npmrunserver3.png)
-    * Back to your browser, where the front-end of the Dapp resides, select in Metamask the account for the passenger you want to work with. For instance, in our example, it is the second address shown in Ganache-cli, which we have imported into Metamask:
+    * Back to your browser, where the front-end of the Dapp resides, select in Metamask the account for the passenger you want to work with. In our example, it is the second address shown in Ganache-cli, which we have imported into Metamask:
     ![metamask](/Screenshots/metamask.png)
-    * Now, you can test the life cycle of the flight delay insurance DApp throughout its different stages. These stages are represented by the four sections of the front-end page, which can be conveniently located by either scrolling or the navigation bar at the end of the page:
+    * Now, you can test the life cycle of the flight delay insurance DApp throughout its different stages. These stages are represented by the four sections of the front-end page, which can be conveniently located by either scrolling or through the navigation bar at the end of the page:
         * *Check Operational Status of Contract*. This first section allows you to check the operational status of the contract, by just clicking the *check* button.
         ![checkoperationalstatus](/Screenshots/checkoperationalstatus.png)
         * *Purchase Insurance for Flight*. This second section allows the chosen passenger to buy an insurance for the chosen flight at the desired amount. This amount can be anything you want up to 1 ether. You can see below the balance of the passenger's account before and after purchasing the insurance. As you can observe, it has decreased by 1 ether (if we do not take into account the gas spent, which is a quite small amount compared to the 1 ether.
@@ -131,7 +130,7 @@ For convenience, one such file has been provided for you, so that you just have 
         * *Fetch Flight Status Update*. This third section allows the chosen passenger to request a fetch flight status update from the oracles.
         ![fetchflightstatusupdate](/Screenshots/fetchflightstatusupdate.png)
         At this point it is important to turn our attention to the terminal shell window where the server managing the oracles is running. You will see the following messages displayed there:
-            * For a start, the data of the event captured by the server is shown. This event has been triggered by the button just clicked at the dapp front-end in the browser. The purpose of the event is of course to fetch flight status update.
+            * For a start, the data of the event captured by the server is shown. This event has been triggered by the button just clicked at the dapp front-end in the browser. The purpose of the event is of course to fetch a flight status update.
             ![npmrunserver4](/Screenshots/npmrunserver4.png)
             * Then, the request is processed. Firstly, the oracles that do not match the request, and, as a result, do not submit a response, are displayed.
             ![npmrunserver5](/Screenshots/npmrunserver5.png)
